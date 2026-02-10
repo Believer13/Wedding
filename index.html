@@ -21,9 +21,16 @@
       font-family: "Lora", serif;
       background-image: url(./images/bg.jpeg);
       background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
+      background-position: center center;
+      background-attachment: scroll;
       background-repeat: no-repeat;
+      min-height: 100vh;
+    }
+
+    @media (min-width: 768px) {
+      body {
+        background-attachment: fixed;
+      }
     }
 
     .font-secondary {
