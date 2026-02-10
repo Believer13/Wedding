@@ -19,18 +19,20 @@
       }
 
       body {
+          margin: 0;
         font-family: "Lora", serif;
         position: relative;
-        min-height: 100vh;
+        min-height: 100svh;
       }
 
       html {
         height: 100%;
+          margin: 0;
       }
 
       body::before {
         content: "";
-        position: absolute; /* NOT fixed */
+        position: fixed; /* NOT fixed */
         inset: 0;
         background-image: url(./images/bg.jpeg);
         background-size: cover;
