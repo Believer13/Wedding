@@ -2,9 +2,15 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
     <title>Приглашение на свадьбу: Гумар и Диёра</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link
@@ -24,7 +30,9 @@
         height: 100%;
         margin: 0;
         padding: 0;
+        width: 100%;
         overflow-x: hidden;
+        -webkit-text-size-adjust: 100%;
       }
 
       body {
@@ -32,34 +40,34 @@
         padding: 0;
         font-family: "Lora", serif;
         position: relative;
-        min-height: 100vh;
-        min-height: -webkit-fill-available;
-        min-height: 100svh;
         width: 100%;
+        min-height: 100vh;
         overflow-x: hidden;
+        overscroll-behavior: none;
+        -webkit-overflow-scrolling: touch;
       }
 
       body::before {
         content: "";
         position: fixed;
-        top: 0;
+        top: -10vh;
         left: 0;
         right: 0;
-        bottom: 0;
-        width: 100%;
-        height: 100vh;
-        height: -webkit-fill-available;
-        height: 100svh;
+        bottom: -10vh;
+        width: 100vw;
+        height: 120vh;
         background-image: url(./images/bg.jpeg);
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
         z-index: -1;
       }
-
+      
       @media (max-width: 767px) {
         body::before {
-          background-position: center top;
+          top: -15vh;
+          bottom: -15vh;
+          height: 130vh;
         }
       }
 
@@ -213,9 +221,9 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background-image: url(./images/bg.jpeg);
-        background-size: cover;
-        background-position: center;
+        width: 100%;
+        height: 100vh;
+        height: 100dvh;
         transition:
           opacity 0.8s ease,
           visibility 0.8s ease;
@@ -257,6 +265,11 @@
       #main-content {
         opacity: 0;
         transition: opacity 1s ease 0.5s;
+        width: 100%;
+      }
+
+      #main-content section {
+        width: 100%;
       }
 
       #main-content.visible {
